@@ -5,3 +5,5 @@ aiohttp
 python-telegram-bot
 firebase-admin
 telebot
+python-dotenv
+pyTelegramBotAPI
