@@ -6,7 +6,9 @@ import json
 import asyncio
 import requests
 import datetime
+import firebase_admin
 from firebase_admin import credentials, firestore, storage
+from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 
 # Initialize FastAPI app
