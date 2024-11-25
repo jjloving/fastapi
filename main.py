@@ -19,7 +19,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 bot = AsyncTeleBot(BOT_TOKEN)
 
 # Firebase setup
-firebase_config =json.loads(os.environ.get("FIREBASE_SERVICE_ACCOUNT"))
+firebase_config = json.loads(os.environ.get("FIREBASE_SERVICE_ACCOUNT"))
 cred = credentials.Certificate(firebase_config)
 firebase_admin.initialize_app(cred, {'storageBucket': 'orblix-15f00.appspot.com'})
 db = firestore.client()
@@ -31,7 +31,7 @@ def generate_start_keyboard():
     keyboard.add(InlineKeyboardButton("Open Orblix App", web_app=WebAppInfo(url="https://orblix.netlify.app/")))
     return keyboard
 
-# Bot command handler
+# Bot command handler for /start
 @bot.message_handler(commands=['start'])
 async def start(message):
     user_id = str(message.from_user.id)
