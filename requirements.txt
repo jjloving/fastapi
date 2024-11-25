@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 requests
+aiohttp
 python-telegram-bot
 firebase-admin
 telebot
