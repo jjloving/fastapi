@@ -32,7 +32,7 @@ def generate_start_keyboard():
     return keyboard
 
 # Bot command handler
-@bot.message_handler(commands=['/start'])
+@bot.message_handler(commands=['start'])
 async def start(message):
     user_id = str(message.from_user.id)
     user_first_name = str(message.from_user.first_name)
